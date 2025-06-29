@@ -1,9 +1,9 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api"
+      "source": "/hono/(.*)",
+      "destination": "/hono"
     }
   ],
-  "redirects": [{ "source": "/", "destination": "/api", "permanent": false }]
+  "redirects": [{ "source": "/", "destination": "/hono", "permanent": false }]
 }
