@@ -1,20 +1,11 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
-import { trpcServer } from "@hono/trpc-server";
-import { appRouter } from "../src/trpc/routers/_app";
-import { createTRPCContext } from "../src/trpc/init";
+
 const app = new Hono().basePath("/api");
 
-// app.get('/', (c) => {
-//   return c.json({ message: "Congrats! You've deployed Hono to Vercel" })
-// })
-app.use(
-  "/trpc/*",
-  trpcServer({
-    router: appRouter,
-    createContext: createTRPCContext,
-  })
-);
+app.get("/", (c) => {
+  return c.json({ message: "Congrats! You've deployed Hono to Vercel" });
+});
 
 const handler = handle(app);
 
