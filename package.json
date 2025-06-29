@@ -4,7 +4,7 @@
     "deploy": "vercel",
     "build": "tsc && tsc-alias"
   },
-  "main": "dist/hono/[...route].js",
+  "main": "dist/api/index.js",
   "type": "module",
   "dependencies": {
     "hono": "^4.4.2",
