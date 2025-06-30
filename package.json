@@ -16,7 +16,6 @@
     "zod-openapi": "^4.2.4"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.15",
     "tsc-alias": "^1.8.16",
     "vercel": "^32.4.1"
   }
