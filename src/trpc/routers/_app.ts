@@ -8,8 +8,6 @@ export const appRouter = createTRPCRouter({
   // students: studentsRouter,
   backlogs: backlogRouters,
 });
-//midday
-
 export type AppRouter = typeof appRouter;
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
 export type RouterInputs = inferRouterInputs<AppRouter>;
