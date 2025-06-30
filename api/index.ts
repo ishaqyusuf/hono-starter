@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 const app = new Hono().basePath("/api");
-
+import { testResp } from "../src/fn";
 // app.get('/', (c) => {
 //   return c.json({ message: "Congrats! You've deployed Hono to Vercel" })
 // })
@@ -13,7 +13,10 @@ const app = new Hono().basePath("/api");
 //   })
 // );
 app.get("/", (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel! API" });
+  return c.json({
+    message: "Congrats! You've deployed Hono to Vercel! API",
+    ...testResp(),
+  });
 });
 const handler = handle(app);
 
