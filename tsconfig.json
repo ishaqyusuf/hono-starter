@@ -2,10 +2,11 @@
   "compilerOptions": {
     "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleDetection": "force",
     "allowJs": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
+    "types": ["bun-types"],
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
