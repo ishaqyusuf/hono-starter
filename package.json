@@ -8,7 +8,8 @@
   "type": "module",
   "dependencies": {
     "hono": "^4.4.2",
-    "@hono/trpc-server": "^0.3.4",
+    "@hono/node-server": "^1.14.4",
+    "@hono/trpc-server": "^0.4.0",
     "@hono/zod-openapi": "^0.19.8",
     "@trpc/server": "^11.2.0",
     "bun-vercel": "^1.0.0-alpha.5",
