@@ -2,7 +2,7 @@
   "scripts": {
     "start": "vercel dev",
     "deploy": "vercel",
-    "build": "tsc && tsc-alias"
+    "---build": "tsc && tsc-alias"
   },
   "main": "dist/api/index.js",
   "type": "module",
