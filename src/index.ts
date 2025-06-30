@@ -4,7 +4,9 @@ import { handle } from "hono/vercel";
 const app = new Hono().basePath("/api");
 
 app.get("/", (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel!" });
+  return c.json({
+    message: "Congrats! You've deployed Hono to Vercel! FROM SRC",
+  });
 });
 
 const handler = handle(app);
