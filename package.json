@@ -5,7 +5,42 @@
     "build:vc": "bun-vercel ./src/bun.ts",
     "deploy:vc": "vc"
   },
-  "type": "module",
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2020": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "test"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,json}": [
+      "prettier --write \"**/*.{ts,json}\" --cache",
+      "eslint --fix ."
+    ],
+    "*.ts": [
+      "tsc --noEmit --esModuleInterop --skipLibCheck --types bun-types"
+    ]
+  },
   "dependencies": {
     "hono": "^4.4.2",
     "@hono/node-server": "^1.14.4",
