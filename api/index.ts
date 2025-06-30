@@ -1,8 +1,5 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
-import { trpcServer } from "@hono/trpc-server";
-import { appRouter } from "../src/trpc/routers/_app";
-import { createTRPCContext } from "../src/trpc/init";
 const app = new Hono().basePath("/api");
 
 // app.get('/', (c) => {
