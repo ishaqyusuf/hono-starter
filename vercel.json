@@ -6,7 +6,9 @@
       "destination": "/api"
     }
   ],
-  "redirects": [{ "source": "/", "destination": "/api", "permanent": false }],
+  "redirects": [
+    { "source": "/", "destination": "/api/trpc", "permanent": false }
+  ],
   "buildCommand": "bun run build:vc",
   "regions": ["bom1"]
 }
