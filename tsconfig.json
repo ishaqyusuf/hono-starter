@@ -1,26 +1,31 @@
 {
   "compilerOptions": {
+    "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "CommonJS",
-    "skipLibCheck": true,
-    "lib": ["esnext"],
-
-    /* Bundler mode */
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": ["bun-types", "@cloudflare/workers-types"],
-
-    /* Linting */
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "allowJs": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-
-    /* path aliases */
-    // "baseUrl": "./",
-    // "paths": {
-    //   "@/*": ["src/*"]
-    // }
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": ["src/*"],
+      "@engine/*": ["../engine/src/*"],
+      "@jobs/*": ["../../packages/jobs/src/*"]
+    },
+    "types": ["bun-types"]
   },
-  "include": ["_api", "src", "test", ".env"]
+  "exclude": ["node_modules"],
+  "include": ["_api", "src/**/*.ts"]
 }
