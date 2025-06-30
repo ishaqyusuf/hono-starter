@@ -13,7 +13,7 @@ const app = new Hono().basePath("/api");
 //   })
 // );
 app.get("/", (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel!" });
+  return c.json({ message: "Congrats! You've deployed Hono to Vercel! API" });
 });
 const handler = handle(app);
 
